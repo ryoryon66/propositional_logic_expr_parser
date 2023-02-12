@@ -1,6 +1,19 @@
 # propositional_logic_expr_parser
 命題論理の論理式を構文解析してASTをつくり、可視化します。また解析した論理式に対してそれぞれの命題変数に真理値の代入を行い計算する機能をvisitor patternを用いて作成しました。論理式のAST可視化かつてからやってみたかったのでできてうれしい。
 
+# BNF
+
+```
+expression :=  term | term "|" expression
+term := factor | factor & term
+factor := unit | ~ factor
+unit := atom | (expression)
+atom := アルファベットで構成された文字列
+
+```
+
+なおspaceは構文解析の際には無視される。
+
 # 使い方(適当)
 
 ```
