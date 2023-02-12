@@ -9,7 +9,6 @@ term := factor | factor & term
 factor := unit | ~ factor
 unit := atom | (expression)
 atom := アルファベットで構成された文字列
-
 ```
 
 なおspaceは構文解析の際には無視される。
