@@ -1,6 +1,14 @@
 # propositional_logic_expr_parser
 命題論理の論理式を構文解析してASTをつくり、可視化します。また解析した論理式に対してそれぞれの命題変数に真理値の代入を行い計算する機能をvisitor patternを用いて作成しました。論理式のAST可視化かつてからやってみたかったのでできてうれしい。
 
+# 使い方(適当)
+
+各.pyを適当に実行すると指定すべき引数がでてくる（はず）
+
+# 動作確認
+
+topでpytest実行
+
 # example
 
 ![ASTexample1](https://user-images.githubusercontent.com/46624038/218297175-9b00232d-b2f8-4534-8980-443f530ab657.png)
