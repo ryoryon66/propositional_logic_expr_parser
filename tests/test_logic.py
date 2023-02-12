@@ -82,6 +82,12 @@ class TestLogicParser(object):
         parser = LogicParser("a | b & ~c & d | d & ~ ~  ~ e")
         print (f"parser.parse() is {parser.ast}")
         assert str(parser.ast) == "(a | ((b & (~c)) & d)) | (d & (~(~(~e))))"
+    
+    def test_visualize(self):
+        
+        parser = LogicParser("a & b | c & d")
+        tree = parser.parse()
+        tree.visualizeAST()
         
     
 class TestTruthValueAssignment(object):
@@ -148,6 +154,8 @@ class TestTruthValueAssignment(object):
         
         visitor = TruthValueAssignmentVisitor({"a":False})
         assert ast.accept(visitor) == False
+    
+    
         
     
     def test_complex1(self):
