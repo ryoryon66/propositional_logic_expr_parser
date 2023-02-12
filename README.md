@@ -3,7 +3,7 @@
 
 # 使い方(適当)
 
-各.pyを適当に実行すると指定すべき引数がでてくる（はず）
+各logic_tokenizer.py(tokenize),logic_parser.py(AST表示),truth_value_assignment.py(真理値代入)を適当に実行すると指定すべき引数がでてくる（はず）
 
 # 動作確認
 
