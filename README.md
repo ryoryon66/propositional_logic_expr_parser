@@ -83,3 +83,8 @@ top directoryでpytest実行
 四則演算のところまではCで書いたことがあったのでそれを思い出しながらかきました。
 
 [低レイヤを知りたい人のためのCコンパイラ作成入門](https://www.sigbus.info/compilerbook)
+
+PyPIへの公開手順は主に以下を参考にしました。
+
+[PyPIパッケージ公開手順](https://qiita.com/shinichi-takii/items/e90dcf7550ef13b047b5)
+
