@@ -46,7 +46,10 @@ Tokens:
 <TKkind.ATOM,Aoki>
 ```
 
-visualized_ast.pngが生成されている。
+以下のようなvisualized_ast.pngが生成される。
+
+![visualized_ast](https://user-images.githubusercontent.com/46624038/224380380-e34e9001-8a46-4e4a-9a7c-586b4f23f33d.png)
+
 
 
 # git cloneしてくる場合
