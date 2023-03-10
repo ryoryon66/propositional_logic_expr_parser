@@ -1,5 +1,5 @@
-from logic_ast import *
-from logic_parser import LogicParser
+from .logic_ast import *
+from .logic_parser import LogicParser
 import  sys
 
 class TruthValueAssignmentVisitor():

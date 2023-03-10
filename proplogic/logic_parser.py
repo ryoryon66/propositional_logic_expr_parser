@@ -1,6 +1,6 @@
 from secrets import token_urlsafe
-from logic_tokenizer import TKkind, Token,LogicTokenizer
-from  logic_ast import LogicAST, ATOM, AND, OR, NEG
+from .logic_tokenizer import TKkind, Token,LogicTokenizer
+from  .logic_ast import LogicAST, ATOM, AND, OR, NEG
 import traceback
 import logging
 import sys
