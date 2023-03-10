@@ -4,8 +4,8 @@ import sys
 sys.path.append(".")
 
 
-from logic_parser import LogicParser
-from truth_value_assignment import TruthValueAssignmentVisitor
+from proplogic.logic_parser import LogicParser
+from proplogic.truth_value_assignment import TruthValueAssignmentVisitor
 import logging
 
 

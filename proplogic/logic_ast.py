@@ -18,7 +18,13 @@ class LogicAST(ABC):
         pass
     
     
-    def visualizeAST(self):
+    def visualizeAST(self,filename = "ast.png"):
+        """
+        astを可視化して保存
+
+        Args:
+            filename (str, optional): ファイル名. Defaults to "ast.png".
+        """
         
         G = nx.DiGraph()
         
@@ -99,12 +105,15 @@ class LogicAST(ABC):
         A.layout('dot')
         # caption
         A.graph_attr['label'] = f"AST of {self}"
-        A.draw('ast.png')
+        A.draw(filename)
 
         return
 
 
 class ATOM(LogicAST):
+    """
+    AST上で論理式の命題変数を表すクラス
+    """
     
     def __init__(self, name):
         self.name = name
@@ -116,6 +125,9 @@ class ATOM(LogicAST):
         return visitor.case_atom(self)
 
 class AND(LogicAST):
+    """
+    AST上で論理式のANDを表すクラス
+    """
     
     def __init__(self, input1, input2):
         self.input1 = input1
@@ -138,6 +150,9 @@ class AND(LogicAST):
         return visitor.case_and(self)
 
 class OR(LogicAST):
+    """
+    AST上で論理式のORを表すクラス
+    """
     
     def __init__(self, input1, input2):
         self.input1 = input1
@@ -160,6 +175,9 @@ class OR(LogicAST):
         return visitor.case_or(self)
 
 class NEG(LogicAST):
+    """
+    AST上で論理式のNOTを表すクラス
+    """
                 
     def __init__(self, input1):
         self.input1 = input1
