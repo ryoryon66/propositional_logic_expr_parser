@@ -1,7 +1,7 @@
 <img alt="PyPI" src="https://img.shields.io/pypi/v/proplogic?style=plastic"> <img alt="Bower" src="https://img.shields.io/bower/l/bootstrap?style=plastic"> 
 
 # propositional_logic_expr_parser
-命題論理の論理式を構文解析してASTをつくり、可視化します。また解析した論理式に対してそれぞれの命題変数に真理値の代入を行い計算する機能をvisitor patternを用いて作成しました。論理式のAST可視化かつてからやってみたかったのでできてうれしい。pipで入れられるようにした。
+命題論理の論理式を構文解析してASTをつくり、可視化します。また解析した論理式に対してそれぞれの命題変数に真理値の代入を行い計算する機能をvisitor patternを用いて作成しました。論理式のAST可視化かつてからやってみたかったのでできてうれしい。pipで入れられるようにPyPIで公開した。
 
 
 
@@ -54,20 +54,27 @@ Tokens:
 
 
 
+もしかしたらgraphvizを入れるように言われるかもしれないのでそのときは以下を実行。[公式ページ](https://pygraphviz.github.io/documentation/stable/install.html)
+
+```
+sudo apt-get install graphviz graphviz-dev
+```
+
+M1 macの人は[こちら](https://github.com/pygraphviz/pygraphviz/issues/398)も参考になるかもしれない。
+
+
+
 # git cloneしてくる場合
 
 ```
 pip install -r requirements.txt
 ```
 
-もしかしたらgraphvizを入れるように言われるかもしれないのでそのときは以下を実行。
-
-```
-sudo apt-get install graphviz graphviz-dev
-```
 
 
 各logic_tokenizer.py(tokenize),logic_parser.py(AST表示),truth_value_assignment.py(真理値代入)を適当に実行すると指定すべき引数がでてくる（はず）
+
+
 
 # 動作確認
 
