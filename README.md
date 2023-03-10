@@ -1,5 +1,7 @@
 # propositional_logic_expr_parser
-命題論理の論理式を構文解析してASTをつくり、可視化します。また解析した論理式に対してそれぞれの命題変数に真理値の代入を行い計算する機能をvisitor patternを用いて作成しました。論理式のAST可視化かつてからやってみたかったのでできてうれしい。
+命題論理の論理式を構文解析してASTをつくり、可視化します。また解析した論理式に対してそれぞれの命題変数に真理値の代入を行い計算する機能をvisitor patternを用いて作成しました。論理式のAST可視化かつてからやってみたかったのでできてうれしい。pipで入れられるようにした。
+
+
 
 # BNF
 
@@ -13,7 +15,41 @@ atom := アルファベットで構成された文字列
 
 なおspaceは構文解析の際には無視される。
 
-# 使い方(適当)
+# PyPIからinstall
+
+```
+pip install proplogic
+```
+
+以下のようにして可視化を行える。
+
+```
+>>> from proplogic.logic_visualizer import *
+>>> visualize_logical_expression("Takahashi & Aoki | ( Aoki & ~~ ~ ~ Takahashi | Aoki ) & Aoki")
+Tokens:
+<TKkind.ATOM,Takahashi>
+<TKkind.AND,&>
+<TKkind.ATOM,Aoki>
+<TKkind.OR,|>
+<TKkind.LPAREN,(>
+<TKkind.ATOM,Aoki>
+<TKkind.AND,&>
+<TKkind.NEG,~>
+<TKkind.NEG,~>
+<TKkind.NEG,~>
+<TKkind.NEG,~>
+<TKkind.ATOM,Takahashi>
+<TKkind.OR,|>
+<TKkind.ATOM,Aoki>
+<TKkind.RPAREN,)>
+<TKkind.AND,&>
+<TKkind.ATOM,Aoki>
+```
+
+visualized_ast.pngが生成されている。
+
+
+# git cloneしてくる場合
 
 ```
 pip install -r requirements.txt
